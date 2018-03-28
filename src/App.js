@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import createReactClass from 'create-react-class';
 import data from './data.js';
 import _ from 'lodash';
+import AddUser from './components/adduser';
+import './app.css';
 
 var App = createReactClass({
 
@@ -13,37 +13,45 @@ var App = createReactClass({
     }
   },
 
+//users vs user - is the ;ater what is being passed back from the adduser component?
+
+  onAddUserClicked: function(newUser) {
+    this.state.data.push(newUser)
+
+    this.setState({
+      users: this.state.data,
+    })
+  },
+
+  renderAddUser: function(){
+    <AddUser/>
+  },
+
   renderUsers: function(){
-    return _.map(this.state.users, (user) => {
+    return _.map(this.state.users, (users) => {
       return (
-        <li key={user._id}>
-            <div>
-              {user.firstName}
-            </div>
-            <div>
-              {user.lastName}
-            </div>
-            <div>
-              {user.hobby}
-            </div>
-            <div>
-              {user.age}
-            </div>
-        </li>
+        <tr key={users._id}>
+{/*           I have questions about the key={...} is doing - https://www.menubar.io/reactjs-tables/ & https://reactjs.org/docs/lists-and-keys.html
+ */}      <td className='FirstName'>{users.firstName}</td> 
+          <td className='LastName'>{users.lastName}</td>
+          <td className='Hobby'>{users.hobby}</td>
+          <td className='Age'>{users.age}</td>
+        </tr>
       );
     })
-      
   },
 
   render: function() {
-    console.log(data);
     return (
+      
       <div className="App">
 
+        <AddUser />
+        
         {this.renderUsers()}
         
-
       </div>
+      
     );
   }
 })
