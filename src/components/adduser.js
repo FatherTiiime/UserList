@@ -33,7 +33,7 @@ var AddUser = createReactClass({
         this.setState({ age: event.target.value })
     },
 
-    onAddUserClicked: function(){
+    onAddUserClicked: function(users){
         console.log('onAddUserClicked', this.state);
         this.props.onAddUserClicked(this.state) //what is the end parenthesis doing
     },

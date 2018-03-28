@@ -1,4 +1,4 @@
-var users = [{
+var Users = [{
     _id: '12345',
     firstName: 'Brad',
     lastName: 'Jones',
@@ -36,4 +36,4 @@ var users = [{
     age: 55,
 }]
 
-export default users;
+export default Users;

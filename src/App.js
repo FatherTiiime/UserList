@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import createReactClass from 'create-react-class';
-import data from './data.js';
+import Users from './data.js';
 import _ from 'lodash';
 import AddUser from './components/adduser';
 import './app.css';
@@ -9,22 +9,18 @@ var App = createReactClass({
 
   getInitialState: function() {
     return {
-      users: data
+      users: Users
     }
   },
 
 //users vs user - is the ;ater what is being passed back from the adduser component?
 
   onAddUserClicked: function(newUser) {
-    this.state.data.push(newUser)
+    this.state.users.push(newUser)
 
     this.setState({
-      users: this.state.data,
+      users: this.state.users,
     })
-  },
-
-  renderAddUser: function(){
-    <AddUser/>
   },
 
   renderUsers: function(){
@@ -46,7 +42,9 @@ var App = createReactClass({
       
       <div className="App">
 
-        <AddUser />
+        <AddUser 
+          onAddUserClicked={this.onAddUserClicked}
+        />
         
         {this.renderUsers()}
         
