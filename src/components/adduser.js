@@ -57,7 +57,7 @@ var AddUser = createReactClass({
                     Age
                         <input type='text' value={this.state.age} onChange={this.onAgeChanged} />
                 </label>
-                <button onClick={this.onAddUserClicked}>Add</button>
+                <button type='button' onClick={this.onAddUserClicked}>Add</button>
             </form>
         );
     }
