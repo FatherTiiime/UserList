@@ -1,28 +1,34 @@
+/* green - #A9ECA2
+yellow - #F5FFCB
+orange - #FFE3B0
+pink - #F5C8BD */
+
+
 .App {
-  text-align: center;
+    background-color: #F5FFCB
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.AddUser {
+    background-color: #A9ECA2;
+    padding: 20px;
+    
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.FirstName {
+    padding-left: 20px;
+    width: 35%;
+    /* margin: 2px solid #F5C8BD; */
+
 }
 
-.App-title {
-  font-size: 1.5em;
+.LastName {
+    width: 35%
 }
 
-.App-intro {
-  font-size: large;
+.Hobby {
+    width: 20%
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Age {
+    width: 10%
 }

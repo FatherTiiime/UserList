@@ -1,4 +1,4 @@
-var users = [{
+var Users = [{
     _id: '12345',
     firstName: 'Brad',
     lastName: 'Jones',
@@ -6,34 +6,34 @@ var users = [{
     age: 34,
 }, {
     _id: '22345',
-    firstName: 'Brad1',
-    lastName: 'Jones',
-    hobby: 'textiles',
-    age: 34,
+    firstName: 'Sarah',
+    lastName: 'Thompson',
+    hobby: 'bare-knuckle fighting',
+    age: 75,
 }, {
     _id: '32345',
-    firstName: 'Brad2',
-    lastName: 'Jones',
-    hobby: 'textiles',
-    age: 34,
+    firstName: 'Felix',
+    lastName: 'Packet',
+    hobby: 'shouting',
+    age: 11,
 }, {
     _id: '42345',
-    firstName: 'Brad3',
-    lastName: 'Jones',
-    hobby: 'textiles',
-    age: 34,
+    firstName: 'Michael',
+    lastName: 'Reaks',
+    hobby: 'Fire poi',
+    age: 39,
 }, {
     _id: '52345',
-    firstName: 'Brad4',
-    lastName: 'Jones',
-    hobby: 'textiles',
-    age: 34,
+    firstName: 'Lara',
+    lastName: 'Bendaround',
+    hobby: 'Magic',
+    age: 41,
 }, {
     _id: '62345',
-    firstName: 'Brad5',
-    lastName: 'Jones',
-    hobby: 'textiles',
-    age: 34,
+    firstName: 'Sonia',
+    lastName: 'Hexagon',
+    hobby: 'Rampant art',
+    age: 55,
 }]
 
-export default users;
+export default Users;
